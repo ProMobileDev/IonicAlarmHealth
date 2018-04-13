@@ -1,0 +1,93 @@
+page-login {
+
+    ion-content{
+        background-image: url("../assets/imgs/login_bg.png");
+        background-size: cover;
+    }
+    .text-input-md, .text-input-ios{
+        text-align: center;
+    }
+    .item-md.item-block .item-inner, .item-ios.item-block .item-inner{
+        border-bottom: none;    
+    }
+    .header{
+        text-align: center;
+        margin-top: 10%;
+        .header_img{
+            max-width: 65%;
+        }
+    }
+    .social{
+        margin-top: 5%;
+        .twitter{
+            padding-left: 0px;
+            text-align: left;
+        }
+        .social_img{
+            max-width: 90%;
+        }
+        .facebook{
+            padding-right: 0px;
+            text-align: right;
+        }
+    }
+    .email_item{
+        margin-top: 5%;
+        height: 7%;
+    }
+    .password_item{
+        margin-top: 3%;
+        height: 7%;
+        .item-inner{
+            border-bottom-color: none; 
+            -webkit-box-shadow: none;
+            box-shadow: none; 
+        }
+    }
+    .accept_row{
+        text-align: center;
+        margin-top: 3%; 
+        .login-btn{
+            width: 60%;
+            background-color: #2ac8b3;
+            border-radius: 40px;
+            border: 1px solid darkgrey;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+       
+    }
+    p{
+        margin-top: 2%;
+        color: gray;
+        text-align: center;
+    }
+    .register_row{
+        text-align: center;
+        margin-top: 5%;
+        .register-btn{
+            width: 60%;
+            background-color: darkgrey;
+            border-radius: 40px;
+            border: 1px solid #2ac8b3;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+        .button-md:hover:not(.disable-hover){
+            background-color: #2ac8b3;
+        } 
+    }
+    
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    .item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+        border-bottom-color: none !important; 
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important; 
+    }
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    .item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+        border-bottom-color: none !important; 
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important; 
+    }
+}

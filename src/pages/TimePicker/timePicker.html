@@ -1,0 +1,47 @@
+ <ion-content padding>
+</ion-content>
+
+<div class="popup-container">
+  <div class="popup">
+    <div class="popup-body">
+      <div>
+        <div class="heading"> {{time.format('HH : mm')}} </div>
+        <div class="row" >
+          <div class="col col-25 col-offset-20">
+            <button type="button" class="button button-clear button-small button-dark time_picker_arrows" (click)="increaseHours()">
+              <!-- <ion-icon name ="arrow-up" class="icon"></ion-icon>  -->
+              <!-- <i class="icon ion-chevron-down"></i> --><img  class="arrow-up" src="assets/icon/arrow-up.png" />
+            </button>
+            <div class="time_picker_box_text"> {{time.format('HH')}}</div>
+            <button type="button" class="button button-clear button-small button-dark time_picker_arrows" (click)="decreaseHours()">
+                <!-- <ion-icon  name="arrow-down" class="icon"></ion-icon> -->
+                <img  class="arrow-down" src="assets/icon/arrow-down.png" />
+            </button>
+          </div>
+          <label class="col col-10 time_picker_colon">:</label>
+          <div class="col col-25">
+            <button type="button" class="button button-clear button-small button-dark time_picker_arrows" (click)="increaseMinutes()">
+                <!-- <ion-icon  name ="arrow-up" class="icon"></ion-icon> -->
+                <img  class="arrow-up" src="assets/icon/arrow-up.png" />
+            </button>
+            <div class="time_picker_box_text"> {{time.format('mm')}} </div>
+            <button type="button" class="button button-clear button-small button-dark time_picker_arrows" (click)="decreaseMinutes()">
+                <!-- <ion-icon  name ="arrow-down" class="icon"></ion-icon> -->
+                <img  class="arrow-down" src="assets/icon/arrow-down.png" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-buttons" ng-show="buttons.length">
+      <!-- ngRepeat: button in buttons -->
+      <button  (click)="setTime()" class="button button_set">Set</button>
+      <!-- end ngRepeat: button in buttons -->
+      <button  (click)="close()" class="button  button_close">Close</button>
+      <!-- end ngRepeat: button in buttons -->
+    </div>
+  </div>
+</div>
+
+
+ 

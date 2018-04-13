@@ -1,0 +1,42 @@
+<ion-menu [content]="content" class="sidemenu">
+  <ion-header>
+    <ion-toolbar>
+       <div class ="close_cont">
+          <button ion-button menuToggle class="close-btn" >
+              <img src="assets/sidemenu/close_icon.png" />
+          </button>
+       </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menu_list">
+    <ion-item menuClose> 
+      <ion-label style="margin-left:18%;">{{userName}}</ion-label>
+    </ion-item>
+    <ion-list>
+        <ion-item menuClose class="menu-item" *ngFor="let p of pages" (click)="openPage(p)">
+            <img class="menu-icon" [src]="getUrl(p.icon)" item-start />
+            <h2 class="menu-label">{{p.title | translate}}</h2>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  <ion-footer no-border>
+      <ion-toolbar>
+        <ion-row class="footer-item">
+          <ion-col class="start">
+              <img src="assets/sidemenu/twitter_icon.png" (click)="twLogin()" />
+          </ion-col>
+          <ion-col class="middle">
+              <img src="assets/sidemenu/google_icon.png" (click)="googleLogin()" />
+          </ion-col>
+          <ion-col class="end">
+              <img src="assets/sidemenu/facebook_icon.png" (click)="fbLogin()" />
+          </ion-col> 
+        </ion-row>
+    </ion-toolbar>
+  </ion-footer>  
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

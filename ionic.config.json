@@ -1,0 +1,8 @@
+{
+  "name": "Pharmalarm",
+  "app_id": "8de398ed",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

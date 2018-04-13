@@ -1,0 +1,60 @@
+tagging-text {
+    #textarea {
+        border: 1px solid #3498db;
+        #input-txt{
+          height: 40px;
+        }
+    }
+
+// #textarea input {
+//   border: none;
+//   background: none;
+//   font-size: 1.2em;
+//   padding: 6px;
+//   width: 100%
+//  }
+
+// #textarea input:focus {
+//   outline: none;
+// }
+
+#textarea button {
+  border: 1px solid #eee;
+  background: #3498db;
+  margin: 4px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.mybutton{
+  border: 1px solid #eee;
+  background: darkgray;
+  margin: 4px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.mybutton:after{
+  content: "\d7";
+  color: white;
+  margin-left: 2px;
+  padding: 1px;
+}
+#textarea button:after {
+  content: "\d7";
+  color: white;
+  margin-left: 2px;
+  padding: 1px;
+}
+
+}
+tagging-text-pop{
+  .popover-md .popover-content, .popover-ios .popover-content{
+    width: 91.5%;
+    .item-md, .item-ios{
+        text-align: center;
+    }
+    }
+}

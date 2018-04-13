@@ -1,0 +1,106 @@
+page-signup {
+
+    .toolbar-background-md, .toolbar-background-ios{
+        background-color: #2bc6b1;
+    }
+    .back-button-text-ios, .back-button-text-md{
+        display: none;
+    }
+    .toolbar-title-ios, .toolbar-title-md{
+        color: white;
+        text-align: center;
+        margin-left: -20px;
+    }
+    ion-title{
+        // text-align: center;
+        // margin-left: -15%;
+    }
+    .back-button-icon-md{
+        color: white;
+    }
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+        // text-align: center;
+        color: white;
+    }
+
+    ion-content{
+        background-image: url("../assets/imgs/login_bg.png");
+        background-size: cover;
+    }
+
+    .text-input-md, .text-input-ios{
+        text-align: center;
+    }
+    .item-md.item-block .item-inner, .item-ios.item-block .item-inner{
+        border-bottom: none;    
+    }
+
+    .item-ios, .item-md {
+        margin-top: 15px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .username-item{
+        margin-top: 10%;
+    }
+    ion-row{
+        background-color: #f9f9f9;
+        margin-top: 3%;
+        height: 45px;
+        border-radius: 10px;
+        .label-item{
+            max-width: 90%;
+            text-align: center;
+            font-size: 1.7rem;
+            margin-left: 10%;
+            padding: 0px;
+        }
+        .dropdown{
+            max-width:10%;
+            .dropdown-icon{
+                color:#2bc6b1;
+                font-size:2.0em;
+                margin-top: 5px;
+                position: absolute;
+                right: 0px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .btn-cont{
+        margin-top: 20px;
+        background-color: transparent;
+        ion-col{
+            width:100%;
+        }
+        .login-btn{
+            position: absolute;
+            width: 80%;
+            border-radius: 40px;
+            background-color: #35d9c3;
+            font-weight: bold;
+            border: 2px solid #a6b6ad;
+        }
+        .register-btn{
+            position: absolute;
+            width: 80%;
+            border-radius: 40px;
+            background-color: #a6b6ad;
+            font-weight: bold;
+            border: 2px solid #35d9c3;
+            margin-left: 12%;
+        }
+    }
+
+    .datetime-text{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+        height: 100%;
+        top: 0;
+        line-height: 250%;
+    }
+    
+}

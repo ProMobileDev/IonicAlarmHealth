@@ -1,0 +1,59 @@
+<!--
+  Generated template for the AlarmModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+ 
+<ion-content padding (click)="close()">
+
+</ion-content>
+<div class="alarm-container">
+  <div class="icon-content">
+    <img class="icon-img" src="assets/imgs/app_icon.png"/>
+  </div>
+  <div class="alarm-content">
+    <ion-row class="header-row">
+      <ion-col class="time-col">
+        <div class="t-container"><p>{{time.format('HH:mm')}}</p></div>
+         
+      </ion-col>
+      <ion-col class="ring-col"><ion-icon name="notifications" color="pharmalarm"></ion-icon></ion-col>
+    </ion-row>
+    <ion-row class="details-row">
+      <ion-col>
+        <h2>{{alarmItem.medicineName}}</h2>
+        <p>{{alarmItem.medicineQty}} {{alarmItem.medicineTakeMode}}</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="img-container">
+      <div class="img-cont">
+          <ion-slides  #mySlider autoplay="2000" loop="true" speed="1000">
+              <ion-slide *ngFor="let item of imgArray">
+                <img class="therap-img" src="{{item}}" />
+              </ion-slide>
+          </ion-slides>
+        <!-- <img class="therap-img" [src]="getURL()" /> -->
+      </div>
+      <ion-fab left middle>
+          <button ion-fab color="light" (click)="previousSection()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </button>
+      </ion-fab>
+        
+      <ion-fab right middle>
+            <button ion-fab color="light" (click)="nextSection()">
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+      </ion-fab>
+  </div>
+
+  <div class="select-container">
+     <ion-row>
+      <ion-col>
+          <ion-toggle [(ngModel)]="alarmed" (ionChange)="updateStatus(alarmed)" ></ion-toggle>
+      </ion-col>
+    </ion-row>  
+  </div>
+</div>

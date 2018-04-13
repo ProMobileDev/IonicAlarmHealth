@@ -1,0 +1,241 @@
+page-home {
+    
+    ion-navbar.toolbar{
+        min-height: 50px;
+        
+    }
+    .toolbar-background{
+        background-color: #2bc6b1;
+         
+    }
+    .toolbar-title{
+        text-align: center;
+        color: white;
+        font-size: 2.0rem;
+        margin-left: -20px;
+        
+    }
+    .back-button-text{
+        display: none;
+    }
+    ion-icon{
+     font-size: 3.5rem!important;
+     color: white;   
+    }
+      
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+        text-align: center;
+        color: white;
+    }
+    .rightbtn_container{
+        text-align: right;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .add_icon{
+            max-width: 50%;
+            margin-right: 2%;
+            margin-top: 2%;
+        }
+    }
+    .plan_home_container{
+        border: 1px solid gray;
+        background-color: gray;
+        text-align: center;
+        font-weight: bold;
+        color: lightgray;
+        .plan_label{
+            font-size: 1.7rem;
+        }
+    }
+    //--------Segment Container---------------
+    .seg-container{
+        ion-col{
+            text-align: center;
+            color:#858484;
+            font-weight: bold;
+            background-color: #efeae8;
+        }
+        ion-col:hover{
+            background-color: #2bc6b1;
+        }
+        ion-label{
+            margin: 8px 5px 8px 0px;
+        }
+        .day-col{
+            border-right: 1px solid #ffffff;
+        }
+        .week-col{
+            border-right: 1px solid #ffffff;
+        }
+        .month-col{
+
+        }
+    }
+     
+    .Datelabel_container{
+        text-align: center;
+        color: #858484;
+        background-color: #35d9c3;
+        font-weight: 1000;
+        border: 1px solid transparent;
+        ion-label{
+            margin: 15px 8px 15px 0px;
+            font-size: 1.7rem;
+        }
+         
+    }
+    .Nextlabel_container{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        top: 7.9%;
+        height: 5%;
+        text-align: center;
+        background-color: #858484;
+        color: white;
+        ion-label{
+            margin: 2% 8px 2% 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }         
+       .drug-row{
+            border-bottom: 1px solid #d1cdcc;
+            background-color: #f0eceb;
+            .time_col{
+                max-width: 25%;
+                padding-bottom: 12px;
+                padding-top: 12px;
+                .first{ 
+                    border: 2px solid #2ac8b3;
+                    width: 80%;
+                    height: 80%;
+                    left: 10px;
+                    padding: 1px;
+                    border-radius: 50px;
+                    margin-top: 5px;
+                }
+                .second{
+                    border: 1px solid white;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    color: white;
+                    border-radius: 50px;
+                    background-color: #2ac8b3;
+                    p{
+                        margin: 10%;
+                    }
+                }
+            }
+            .des_col{
+                max-width: 65%;
+                text-align: left;
+             
+                .title{
+                    margin-bottom: 1%;
+                    margin-top: 5%;
+                    font-size: 1.5rem;
+                    color: #2ac8b3;
+                    font-weight: bold;
+                }
+                .des{
+                    margin-top: 1%;
+                    margin-bottom: 5%;
+                    font-size: 1.2rem;
+                    color: #939393;
+                    font-weight: bold;
+                }
+            }
+            .info_col{
+                max-width: 10%;
+                text-align: center;
+                .info_icon{
+                    max-width: 100%;
+                    border: 0;
+                    margin-top: 15px;
+                    margin-right: 0px;
+                }
+            }
+        }
+        
+    // }
+    .daily_container{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        height: 5%;
+        top:23%;
+        text-align: center;
+        background-color: #858484;
+        color:white;
+        .daily_label{
+            margin: 2% 8px 2% 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    .bottom_container{
+        position: absolute;
+        bottom: 5%;
+        text-align: center;
+        width: 100%;
+        left: 0px;
+        z-index: 100;
+        .logo_icon{
+            width: 20%;
+            margin-bottom: 15px;
+        }
+    }
+    //-------------------------
+    .week-row{
+        left:33.33%;
+        opacity: 0;
+    }
+    .month-row{
+        left: 66.66%;
+        opacity: 0;
+    }
+    .day-row{
+        opacity: 0;
+    }
+    .arrow_box {
+        position: absolute;
+        background: #2ac8b3;
+        border: 1px solid #ffffff;
+        width: 33.33%;
+        height: 43px;
+        top: -100%;
+        z-index: 100;
+        text-align: center;
+        font-weight: bold;
+        color: #828c8c;
+        
+    }
+    .arrow_box:after, .arrow_box:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    
+    .arrow_box:after {
+        border-color: rgba(19, 213, 97, 0);
+        border-top-color: #2ac8b3;
+        border-width: 12px;
+        margin-left: -12px;
+    }
+    .arrow_box:before {
+        border-color: rgba(252, 38, 5, 0);
+        border-top-color: #ffffff;
+        border-width: 13px;
+        margin-left: -13px;
+    }
+     
+      
+}

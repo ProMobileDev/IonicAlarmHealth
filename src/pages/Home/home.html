@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pharmalarm</ion-title>
+    <div class="rightbtn_container" (click)="addItems()">
+        <img class="add_icon" src="assets/icon/add_icon.png" />
+    </div>
+  </ion-navbar>
+   
+</ion-header>
+
+<ion-content>
+    <div class="plan_home_container">
+        <ion-label class="plan_label">{{todayPlanLabel}}</ion-label> 
+    </div>
+    <div class="Datelabel_container">
+      <ion-label class="date_label">{{todayDateLabel}}</ion-label> 
+    </div>
+    <div class="daily-Container">
+      <ion-row class="drug-row" *ngFor="let item of therapService.todayTheraps; let i = index">  
+        <ion-col class="time_col">
+          <div class="first">
+              <div class="second"><p> {{item.time.format('HH:mm')}} </p></div>
+          </div>
+        </ion-col>
+        <ion-col class="des_col">
+          <p class="title">{{item.medicineName}}</p>
+          <p class="des">{{item.medicineQty}} {{item.medicineTakeMode}}</p>
+        </ion-col>
+        <ion-col class="info_col">
+          <img class="info_icon"  [src]="getStatusImage(item.removed)" (click)="gotoDetails(item)"/>
+        </ion-col>
+      </ion-row>
+    </div>
+</ion-content>
+
+ 

@@ -1,0 +1,164 @@
+page-editAlert {
+    ion-navbar.toolbar{
+        border-bottom: 5px solid #828c8c;
+        min-height: 50px;
+        padding: 4px;
+        background-color: #2bc6b1;
+    }
+    .toolbar-title{
+        color: white !important;
+        text-align: center;
+        margin-left: -5%;
+    }
+    .toolbar-background-md, .toolbar-background-ios{
+            background-color: #2bc6b1;
+    }
+    .back-button-icon-md{
+        color: white;
+    }
+    ion-label{
+        color:#828c8c;
+        font-weight: bold;
+    }
+    .input-row{
+        border-radius: 10px;
+        border:1px solid lightgrey;
+        .s-col{
+            background-color: lightgrey;
+            max-width: 15%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding: 0px;
+        }
+        .d-col{
+            max-width: 85%;
+            padding: 0px;
+            .text-input-ios, .text-input-md{
+                margin-left: 3px;
+            }
+        
+        }
+    }
+    .camera-row{
+        margin-top: 10px;
+        ion-col{
+            max-width: 23.5%;
+            padding: 0px;
+            text-align: center;
+            // border: 1px solid grey;
+            .small-img{
+                border: 1px solid grey;
+                border-radius: 10%;
+            }
+             
+        }
+    }
+    .h-o-d-container{
+        border: 1px solid grey;
+        border-radius: 5px;
+        height: 15%;
+        ion-scroll{
+            width: 100%;
+            height: 100%;
+             
+           
+        }
+        ion-scroll.scroll-y .scroll-content{
+            padding:0px !important;
+        }
+        .item-ios.item-block .item-inner{
+            border-bottom: 0px;
+        }
+        .hour-item{
+            padding-left: 30%;
+            padding-right: 29%;
+            text-align: center;
+           
+            .label-ios, .label-md{
+                margin: 11px 0px 11px 15%;
+            }
+            
+        }
+    }
+    .weekly-input{
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+    }
+    .btn-container{
+        margin-top: 10px;
+        .test-col{
+            max-width: 30%;
+            padding-left: 0px;
+            .test-btn{
+                position: absolute;
+                width: 90%;
+                letter-spacing: 0px;
+                background-color: #2bc6b1;
+            }
+        }
+        .save-col{
+            max-width: 70%;
+            .save-btn{
+                position: absolute;
+                width: 90%;
+                right:0px;
+                letter-spacing: 0px;
+                background-color: #2bc6b1;
+            }
+        }
+    }   
+    tagging-text #textarea{
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+    }
+    tagging-text #textarea button{
+        background:darkgray;
+    }
+    .popover-md .popover-content, .popover-ios .popover-content{
+        width: 91.5%;
+        .item-md, .item-ios{
+            text-align: center;
+        }
+    }
+    .addtime-btn{
+        width: 100%;
+        background-color: white;
+        color: darkgray;
+        font-weight: bold;
+        -webkit-box-shadow:none;
+    }
+
+    .medicin-row{
+        ion-label{
+            margin: 11px 3px 8px 3px;
+        }
+        ion-input{
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            height: 44px;
+        }
+        .unity-col{
+            max-width: 50%;
+            padding-left: 0px;
+        }
+        .take-col{
+            max-width: 50%;
+            padding-right: 0px;
+            ion-select{
+                max-width: 100%;
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                height: 44px;
+            }
+        }
+    }
+    ion-datetime{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    ion-item{
+        text-align: center;
+    }
+}

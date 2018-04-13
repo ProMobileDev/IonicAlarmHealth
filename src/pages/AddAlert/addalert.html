@@ -1,0 +1,88 @@
+<!--
+  Generated template for the AddAlertPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Pharmalarm</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-label class="des-label">{{'MEDICIN_NAME' | translate}}</ion-label>
+    <ion-row class="input-row">
+        <ion-col class="s-col"></ion-col>
+        <ion-col class="d-col">
+          <ion-input  class="des-input" type="text" placeholder="{{'MEDICIN_NAME' | translate}}" [(ngModel)]="medicinName"></ion-input>
+        </ion-col>
+    </ion-row>
+    <ion-row class="medicin-row">
+            <ion-col class="unity-col">
+                <ion-label>{{'MEDICIN_QTY' | translate}}</ion-label>
+                <ion-input type="number" placeholder="{{'MEDICIN_QTY' | translate}}" [(ngModel)]="medicinUnity"></ion-input>
+            </ion-col>
+            <ion-col class="take-col">
+                <ion-label>{{'MEDICIN_TYPE' | translate}}</ion-label>
+                <ion-select [(ngModel)]="medicinType" interface="popover" placeholder="{{'MEDICIN_TYPE' | translate}}">
+                    <ion-option *ngFor="let medicinType of therapService.takeModeList" [value]="medicinType" >{{medicinType}}</ion-option>
+                </ion-select>
+            </ion-col>
+    </ion-row>
+    <ion-label class="start-label">{{'START_DATE' | translate}}</ion-label>
+    <ion-row class="input-row">
+        <ion-col class="s-col"></ion-col>
+        <ion-col class="d-col">
+          <ion-input class="start-input" (click)="AddStartDate()" displayFormat="MMM DD, YYYY" type="text" placeholder="{{'START_DATE' | translate}}" [(ngModel)]="startDate"  readonly="true"></ion-input>
+        </ion-col>
+    </ion-row>
+    
+    <ion-label class="end-label">{{'END_DATE' | translate}}</ion-label>
+    <ion-row class="input-row">
+        <ion-col class="s-col"></ion-col>
+        <ion-col class="d-col">
+            <ion-input  class="end-input" (click)="AddEndDate()" type="text" placeholder="{{'END_DATE' | translate}}" [(ngModel)]="endDate" readonly="true"></ion-input>
+        </ion-col>
+    </ion-row>
+    
+    <ion-row class="camera-row">
+      <ion-col>
+          <img class="imageA-col small-img" [src]="therImgA" *ngIf="therImgA" (click)="capture($event)"/>
+      </ion-col>
+      <ion-col style="margin-left:2%;">
+          <img class="imageB-col small-img" [src]="therImgB"  *ngIf="therImgB" (click)="capture($event)"/>
+      </ion-col>
+      <ion-col style="margin-left:2%;">
+          <img class="imageC-col small-img" [src]="therImgC"  *ngIf="therImgC" (click)="capture($event)"/>
+      </ion-col>
+      <ion-col style="margin-left:2%;">
+          <img class="imageD-col small-img" [src]="therImgD"  *ngIf="therImgD" (click)="capture($event)"/>  
+      </ion-col>
+    </ion-row>
+    
+    <ion-label class="end-label">{{'HOURS_OF_DAY' | translate}}</ion-label>
+    <div class="h-o-d-container">
+            <ion-scroll scrollY="true">
+                    <ion-item *ngFor="let alarm of hoursData; let i = index" class="hour-item">
+                            <ion-label>
+                              {{alarm.hours}}:{{alarm.minutes}}
+                              <button (click)="removeAlarm(i)">X</button>
+                            </ion-label>
+                    </ion-item> 
+                    <button ion-button class="addtime-btn" (click)="addAlarmHours()">+ {{'CLICK_HERE_TO_ADD' | translate}}</button>
+            </ion-scroll>
+         
+    </div>
+    
+    <ion-label class="weekly-label">{{'DAYS_OF_WEEK' | translate}}</ion-label>
+    <tagging-text [myText]="therapService.weekDays"></tagging-text>   
+    <ion-row class="btn-container">
+      <ion-col class="test-col">
+        <button ion-button class="test-btn" (click)="testAlert()" block>{{'TEST' | translate}}</button>
+      </ion-col>
+      <ion-col class="save-col">
+          <button ion-button class="save-btn" (click)="saveAlert()" block>{{'SAVE' | translate}}</button>
+      </ion-col>
+    </ion-row>
+</ion-content>

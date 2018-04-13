@@ -1,0 +1,69 @@
+page-calendar-modal {
+
+    .toolbar-ios ion-title, .toolbar-md ion-title{
+        padding-left: 16px;
+    }
+    .toolbar-title-ios, .toolbar-title-md{
+        text-align: left;
+    }
+    .calendar-tool{
+        background-color: #009688;
+    }
+    
+    ion-icon{
+        font-size: 1.5em;
+        color: black;
+    }
+    ion-calendar-month .primary .days .on-selected, ion-calendar-month .primary .startSelection button.days-btn, ion-calendar-month .primary .endSelection button.days-btn{
+        background-color: #009688;
+    }
+    ion-calendar-month .primary button.days-btn small, ion-calendar-month .primary .days .marked p, ion-calendar-month .primary .days .today p{
+        color: #009688;
+    }
+    ion-calendar .title .switch-btn{
+        font-weight: bold;
+    }
+    ion-calendar .title .switch-btn .arrow-dropdown{
+        color: transparent;
+    }
+    ion-calendar-month button.days-btn p{
+        font-weight: bold;
+        color: black;
+    }
+    page-calendar-modal ion-calendar .title .switch-btn{
+        font-weight: bold;
+        color: black;
+        font-size: 1.5rem;
+    }
+    .currenDate-label{
+        margin-left: 11px;
+        font-size: 3.0rem;
+        color: white;
+    }
+    .btn-row{
+        
+        .cancel-col{
+            max-width: 80%;
+            .cancel-btn{
+                width: 30%;
+                right: 15%;
+                position: absolute;
+                color: #009688;
+                font-weight: bold;  
+                background-color: transparent;
+                
+            }
+        }
+        .ok-col{
+            max-width: 20%;
+            .ok-btn{
+                background-color: transparent;
+                color: #009688;
+                font-weight: bold;
+                left: -50%;
+               
+            }
+        }
+       
+    }
+}

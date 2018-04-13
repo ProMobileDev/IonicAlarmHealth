@@ -1,0 +1,48 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content padding>
+  <div class="header">
+    <img class = "header_img"src="assets/imgs/logo.png" />
+  </div>
+  
+  <ion-row class="social">
+    <ion-col class="twitter" (click) = "twitterLgoin()">
+      <img class="social_img" src="assets/imgs/twitter_btn.png" />
+    </ion-col>
+
+    <ion-col class="facebook" (click) = "facebookLgoin()">
+      <img class="social_img" src="assets/imgs/facebook_btn.png" />
+    </ion-col>
+  </ion-row>
+  
+  <form [formGroup]="loginForm" novalidate>  
+    <ion-item class="email_item">
+        <ion-input  class="email-input" formControlName="email" type="email" placeholder="{{'USER_NAME' | translate}}" [class.invalid]="!loginForm.controls.email.valid &&
+        loginForm.controls.email.dirty"></ion-input>
+        <p>Please enter a valid email.</p>
+    </ion-item>
+    <ion-item class="password_item">
+        <ion-input  class="password-input" formControlName="password" type="password" placeholder="{{'PASSWORD' | translate}}" [class.invalid]="!loginForm.controls.password.valid &&
+        loginForm.controls.password.dirty"></ion-input>
+        <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+    
+    <ion-row class="accept_row">
+      <ion-col class="accept">
+        <button ion-button class="login-btn" (click)="accept()">{{"LOGIN" | translate}}</button>
+      </ion-col>
+      
+      </ion-row>
+      <p>{{ 'USERNAME_OR_PASSWORD_FORGOT' | translate }}</p>
+    <ion-row class="register_row">
+      <ion-col class="register">
+          <button ion-button class="register-btn" (click)="register()">{{"NEW_REGISTER?" | translate}}</button>
+      </ion-col>  
+    </ion-row>
+  </form>
+</ion-content>

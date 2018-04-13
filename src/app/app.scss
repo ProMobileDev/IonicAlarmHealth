@@ -1,0 +1,122 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+page-app{
+    .sidemenu{
+        .toolbar{
+            
+            min-height: 55px;
+            .close_cont{
+                text-align: right;
+                font-weight: bold;
+                .close-btn{
+                    margin-left: 80%;
+                    min-width: 40px;
+                    min-height: 40px;
+                }
+                img{
+                    width: 65%;
+                }
+            }
+            
+        }
+        .item-ios [item-left], .item-ios [item-start]{
+            margin: 8px 16px 8px 11px;
+        }
+        .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end]{
+            margin: 9px 8px 9px 8px;
+        }
+        .toolbar-background-ios, .toolbar-background-md{
+            background-color: #797979;
+        }
+        .menu-inner > ion-header, .menu-inner > ion-content, .menu-inner > ion-footer{
+            background-color: #555454;
+        }
+        .userName-item{
+            background-color: #555454;
+        }
+        .menu_list{
+            .list-ios > .item-block:first-child, .list-md > .item-block:first-child{
+                border: 0px;
+            }
+            .list-ios > .item-block:first-child .item-inner, .list-md > .item-block:first-child .item-inner{
+                border-top: 1px solid #767575;
+            }
+            .list-ios > .item-block:last-child .item-inner, .list-md > .item-block:last-child .item-inner{
+                border-bottom: 1px solid #767575;
+            }
+            .list-ios > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block{
+                border:0px;
+            }
+            .list-ios .item-block .item-inner, .list-md .item-block .item-inner{
+                border-bottom: 1px solid #767575;
+                margin-right: 10%;
+                margin-left: 5%;
+            }
+            .item-ios, .item-md{
+                background-color: #555454;
+                color:white;
+                font-weight: bold;
+                min-height: 6.5rem;
+                img{
+                    width: 7%;
+                }
+                h2{
+                    // font-weight: bold;
+                }
+            }
+        }
+        
+    }
+    
+    .footer-item{
+        background-color: #797979;
+        .start{
+            text-align: right;
+        }
+        .middle{
+            text-align: center;
+        }
+        .end{
+            text-align: left;
+        }
+        img{
+            width: 30%;
+        }
+    }
+}
+
+.toolbar-background-md, .toolbar-background-ios{
+    background-color: #2bc6b1;
+}
+.back-button-text-ios, .back-button-text-md{
+    display: none;
+}
+.toolbar-title-ios, .toolbar-title-md{
+    color: white;
+}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+    color: white;
+}
+ 
+ 
+    
+        
+ 
+ 
+     
+ 
